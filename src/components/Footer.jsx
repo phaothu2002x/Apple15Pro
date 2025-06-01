@@ -13,7 +13,7 @@ const Footer = () => {
                         </span>
                         or{' '}
                         <span className="underline text-blue">
-                            other retailer near you{' '}
+                            other retailer near you.{' '}
                         </span>
                     </p>
                     <p className="font-semibold text-gray text-xs">

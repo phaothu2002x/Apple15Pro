@@ -1,7 +1,7 @@
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import React, { useEffect, useState } from "react";
-import { heroVideo, smallHeroVideo } from "../utils";
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import React, { useEffect, useState } from 'react';
+import { heroVideo, smallHeroVideo } from '../utils';
 
 const Hero = () => {
     const [videoSrc, setVideoSrc] = useState(
@@ -17,33 +17,33 @@ const Hero = () => {
     };
 
     useEffect(() => {
-        window.addEventListener("resize", handleVideoSrcChange);
+        window.addEventListener('resize', handleVideoSrcChange);
         return () => {
-            window.removeEventListener("resize", handleVideoSrcChange);
+            window.removeEventListener('resize', handleVideoSrcChange);
         };
     }, []);
 
     useGSAP(() => {
-        gsap.to("#hero", {
+        gsap.to('#hero', {
             opacity: 1,
             delay: 1.5,
             duration: 1,
-            ease: "power2.inOut",
+            ease: 'power2.inOut',
         });
 
-        gsap.to("#cta", {
+        gsap.to('#cta', {
             opacity: 1,
             translateY: -50,
             delay: 1.5,
             duration: 0.8,
-            ease: "power2.inOut",
+            ease: 'power2.inOut',
         });
     });
     return (
         <section className="w-full bg-black nav-height relative">
             <div className="h-5/6 w-full flex-center flex-col">
                 <p id="hero" className="hero-title">
-                    iPhone 15 Pro
+                    iPhone 15 Pro.
                 </p>
                 <div className="md:w-10/12 w-9/12">
                     <video
